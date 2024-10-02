@@ -1,6 +1,7 @@
 fun main() {
-    val list = List(1000) { it + 1 }
+    val list = List(10) { (1..100).random() }
+    println(list)
 
-    println(binarySearch(332, list))
+    println(list.selectionSort())
 }
 

@@ -1,4 +1,6 @@
-fun binarySearch(num: Int, sortedList: List<Int>): Int {
+fun List<Int>.binarySearch(num: Int): Int {
+    val sortedList = this
+
     var bottom = 0
     var top = sortedList.lastIndex
 
@@ -7,9 +9,7 @@ fun binarySearch(num: Int, sortedList: List<Int>): Int {
         val guess = sortedList[middle]
 
         if (guess == num) return middle
-
         if (guess < num) bottom = middle + 1
-
         if (guess > num) top = middle - 1
     }
 
