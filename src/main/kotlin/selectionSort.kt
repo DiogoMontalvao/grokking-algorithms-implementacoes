@@ -8,7 +8,7 @@ fun List<Int>.selectionSort(): List<Int> {
         newList[index] = oldList.removeAt(smallestIndex)
     }
 
-    return newList
+    return newList.toList()
 }
 
 fun List<Int>.findSmallest(): Int {
